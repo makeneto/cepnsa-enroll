@@ -1,0 +1,928 @@
+@import url("https://use.typekit.net/qxq3unr.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e9d6f3;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-purple);
+    border-radius: 4px;
+}
+
+:root {
+    --font: "source-sans-pro", sans-serif;
+    --large-text: 65px;
+    --medium-text: 46.3867px;
+    --small-text: 24px;
+    --text-size: 18px;
+    --text-color: rgb(83, 83, 83);
+
+    --border-radius: 20px;
+    --light-shadow: 0 0 30px rgba(0, 0, 0, 0.082);
+    --padding-left-right: 250px;
+
+    --little-purple: #f4f2f5;
+    --white: #FFFFFF;
+    --baby-purple: #DFB3F2;
+    --light-purple: #C580F2;
+    --purple: #9530D9;
+    --dark-purple: #3D0273;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "source-sans-pro", sans-serif;
+}
+
+.container {
+    padding: 15px;
+    background-color: #f1eaf5;
+}
+
+.data-section {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 30px;
+}
+
+.data-section:first-child {
+    border-radius: 30px 30px;
+    background-color: var(--white);
+    padding-bottom: 18px;
+    box-shadow: var(--light-shadow);
+    margin-bottom: 15px;
+}
+
+.data-section:nth-child(2) {
+    padding: 15px 20px 30px;
+    background-color: #f1eaf5;
+}
+
+.data-section:nth-child(2) input {
+    border: 1px solid var(--baby-purple);
+}
+
+.data-section:nth-child(2) input:focus {
+    border: 2px solid var(--dark-purple);
+}
+
+.data-section:last-child {
+    border-radius: 30px 30px;
+    background-color: var(--white);
+    padding-top: 21px;
+    margin-bottom: 18px;
+    box-shadow: var(--light-shadow);
+}
+
+h3.title {
+    color: var(--dark-purple);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+form {
+    display: grid;
+    row-gap: 7px;
+}
+
+label {
+    display: block;
+    margin-bottom: 25px;
+}
+
+label p {
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: var(--dark-purple);
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    height: 47px;
+    pointer-events: auto;
+    padding: 10px 16px;
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--baby-purple);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none;
+    color: var(--dark-purple) !important;
+    transition: all 0.04s ease-out;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input[type="date"] {
+    font-family: "source-sans-pro", sans-serif;
+    font-size: 1rem;
+    color: var(--dark-purple);
+}
+
+input[type="date"]::placeholder {
+    color: #bb94d4;
+}
+
+input::placeholder {
+    color: #bb94d4;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 4px solid #bb94d4;
+    border: 1px solid var(--dark-purple);
+}
+
+/* Foto do estudante */
+
+.bg-foto {
+    border-radius: 50%;
+    border: 2px solid var(--dark-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: 165px;
+    height: 165px;
+    background: url('./image-user.png') no-repeat center center;
+    background-size: cover;
+}
+
+#profileImage {
+    display: none;
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+    border: none;
+}
+
+.input-photo {
+    border-radius: 20px;
+    margin: 10px auto;
+    padding: 16px;
+    display: grid;
+    row-gap: 10px;
+    justify-content: center;
+    /* background-color: #f0d8ff; */
+}
+
+#studentPhoto {
+    display: none;
+}
+
+/* Upload Student photo */
+.btn {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .3s ease-out;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--light-purple);
+    background-color: var(--dark-purple);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.096);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn::after {
+    background-color: var(--light-purple);
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/* Finish */
+
+#profileImage {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+}
+
+/* Finish */
+
+#age-pai,
+#age-mae {
+    width: 110px;
+}
+
+.age-profs {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+#prof-pai {
+    flex-basis: 300px;
+}
+
+div.grade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
+}
+
+.grade-title {
+    padding-top: 17px;
+}
+
+select {
+    color: var(--dark-purple);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 90%;
+    height: 47px;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: rgb(255 255 255);
+    border: 1px solid var(--baby-purple);
+}
+
+select:focus {
+    border: 2px solid var(--dark-purple);
+}
+
+div.informs {
+    margin-bottom: 20px;
+}
+
+.courseList {
+    display: none;
+}
+
+.change {
+    text-align: center;
+}
+
+/* Submit data */
+.cssbuttons-io-button {
+    background: var(--dark-purple);
+    color: var(--light-purple);
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+    margin: 40px auto;
+}
+
+.cssbuttons-io-button:hover {
+    cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em var(--dark-purple);
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: var(--dark-purple);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+/* Footer */
+footer {
+    margin: 20px 0 30px;
+}
+
+footer p {
+    text-align: center;
+    color: var(--dark-purple);
+    font-size: 18px;
+}
+
+.app-version {
+    color: #b693c5;
+    margin-top: 3px;
+}
+
+.blackIndex {
+    text-decoration: none;
+}
+
+.blackIndex:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ----------Loader----------- */
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.loader {
+    width: 20px;
+    height: 40px;
+    border-radius: 10px 50px;
+    box-shadow: 0px 0px 5px black;
+    animation: dominos 1s ease infinite;
+}
+
+.loader:nth-child(1) {
+    --left: 80px;
+    animation-delay: 0.325s;
+    background-color: var(--dark-purple);
+}
+
+.loader:nth-child(2) {
+    --left: 70px;
+    animation-delay: 0.5s;
+    background-color: var(--purple);
+}
+
+.loader:nth-child(3) {
+    left: 60px;
+    animation-delay: 0.625s;
+    background-color: var(--light-purple);
+}
+
+.loader:nth-child(4) {
+    animation-delay: 0.74s;
+    left: 50px;
+    background-color: var(--baby-purple);
+}
+
+.loader:nth-child(5) {
+    animation-delay: 0.865s;
+    left: 40px;
+    background-color: var(--little-purple);
+}
+
+@keyframes dominos {
+    50% {
+        opacity: 0.7;
+    }
+
+    75% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    80% {
+        opacity: 1;
+    }
+}
+
+/* -----------Cartão de propina para Celular---------- */
+.notifications-container {
+    width: 320px;
+    height: auto;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.success {
+    display: none;
+    line-height: 22px;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    border-radius: 0.375rem;
+    background-color: #f1eaf5;
+}
+
+.success-prompt-wrap {
+    margin-left: 0.75rem;
+}
+
+.success-prompt-heading {
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--dark-purple);
+}
+
+.success-prompt-prompt {
+    margin: 20px 0 0;
+    color: var(--dark-purple);
+}
+
+.success-prompt-prompt p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.success-prompt {
+    color: var(--dark-purple);
+    font-size: 18px;
+}
+
+.studentData {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 3px;
+}
+
+.close-card {
+    width: 30px;
+    stroke: var(--dark-purple);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-card:hover {
+    cursor: pointer;
+}
+
+/* -----------Cartão de propina para Tablets, Pcs, ...---------- */
+.close-tablet {
+    background-color: var(--dark-purple);
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 1px;
+    left: 569px;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.267);
+    transition: all .2s ease-out;
+}
+
+.close-tablet:active {
+    transform: scale(0.90);
+}
+
+.close-tablet:hover {
+    cursor: pointer;
+}
+
+.close-card-icon {
+    width: 30px;
+    height: 30px;
+    stroke: var(--light-purple);
+}
+
+#card-student {
+    display: flex;
+    align-items: center;
+    padding: 10px 9px;
+    background-color: rgb(255, 255, 255);
+    width: 568px;
+    margin: auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.267);
+
+    transform: rotateY(0deg);
+}
+
+.logo-card {
+    width: 66px;
+}
+
+.school-name {
+    font-weight: bold;
+}
+
+.lema {
+    color: rgb(163, 0, 0);
+    font-weight: bold;
+}
+
+.border {
+    width: 100%;
+    border: 1px solid black;
+    padding: 16px 18px;
+}
+
+.school-header {
+    display: flex;
+    gap: 12px;
+}
+
+.card-propina {
+    text-align: center;
+    font-size: 20px;
+    /* margin: 12px 0; */
+}
+
+#foto-student {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 145px;
+    height: 162.3px;
+    background: url('./image-user.png') no-repeat center center;
+    background-size: cover;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.data-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.data {
+    display: grid;
+    gap: 1px;
+}
+
+.content {
+    font-weight: 500;
+    font-size: 22px;
+    color: rgb(0, 0, 104);
+}
+
+.nameCard {
+    color: rgb(163, 0, 0);
+}
+
+.line {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.data-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* -----------Propinas---------- */
+
+#card-propina {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 568px;
+    margin: auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.267);
+
+    transform: rotateY(180deg);
+}
+
+.border-mes {
+    padding: 20px 10px;
+    border: 1px solid black;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.month {
+    padding: 7px 2px;
+    border: 1px solid black;
+    text-align: center;
+    display: grid;
+    row-gap: 10px;
+}
+
+.mes {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dotted {
+    border-bottom: 1px dotted black;
+    margin: 10px;
+}
+
+/* ---------------Rotação do cartão------------------ */
+
+.card {
+    display: none;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+
+    transform: translateX(-50%);
+    width: 568px;
+    height: 390px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.185);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+#card-student,
+#card-propina {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Mensagem do colégio */
+.message-cepnsa {
+    font-family: "Inter", sans-serif;
+    background-color: #F2F1F3;
+    display: none;
+    gap: 12px;
+    width: 342px;
+    padding: 13px;
+    border-radius: 22px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s ease-in-out;
+}
+
+.message-cepnsa img {
+    width: 40px;
+    height: 40px;
+}
+
+.message-content {
+    line-height: 20px;
+}
+
+.message-content h1 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.message-content p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.message-time {
+    display: flex;
+    align-items: start;
+}
+
+.message-time p {
+    font-size: 14px;
+    color: rgb(170, 170, 170);
+    padding-top: 7px;
+    margin: 0;
+}
+
+/* Media Queries */
+/* Tablets */
+@media (min-width: 767px) {
+    .content {
+        padding: 0 10px;
+    }
+
+    form {
+        margin: 30px 30px 0;
+    }
+
+    .bg-foto {
+        width: 187px;
+        height: 187px;
+    }
+
+    #profileImage {
+        width: 184px;
+        height: 184px;
+        border: none;
+    }
+
+    .btn {
+        font-size: 22px;
+    }
+
+    .grid {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    label {
+        margin-bottom: 35px;
+    }
+
+    label p {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        font-size: 19px;
+    }
+
+    input::placeholder {
+        font-size: 19px;
+    }
+
+    input[type="date"] {
+        font-size: 19px;
+    }
+
+    select {
+        width: 259px;
+        font-size: 18px;
+    }
+
+    .class-course {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .message-cepnsa {
+        gap: 15px;
+        width: 475px;
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    .message-cepnsa img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .message-content {
+        padding-top: 3px;
+        line-height: 25px;
+    }
+
+    .message-content h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .message-content p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .message-time {
+        display: flex;
+        align-items: start;
+    }
+
+    .message-time p {
+        font-size: 20px;
+        color: rgb(170, 170, 170);
+        padding-top: 7px;
+        margin: 0;
+    }
+
+    /* Button Submit */
+    .cssbuttons-io-button {
+        font-size: 22px;
+    }
+
+    footer {
+        margin: 20px 0 30px;
+    }
+
+    footer p {
+        font-size: 22px;
+    }
+}
+
+/* Laptops e telas grande*/
+@media (min-width: 1024px) {
+
+    .container {
+        padding: 30px 196px 1px;
+    }
+
+    input {
+        font-size: 22px;
+    }
+
+    input::placeholder {
+        font-size: 22px;
+    }
+
+    input[type="date"] {
+        font-size: 22px;
+    }
+
+    select {
+        width: 330px;
+        font-size: 21px;
+    }
+
+    .class-course {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makene Neto">
+    <meta name="description" content="Site do colégio CEPNSA">
+    <meta name="keywords" content="Nossa Senhora da Anunciação, CEPNSA, Matrícula">
+    <meta property="og:title" content="CEPNSA">
+    <meta property="og:description" content="O Colégio Nossa Senhora da Anunciação">
+    <meta property="og:image" content="../assets/img/index/cepnsa-logo.png">
+    <meta property="og:url" content="URL da página">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="../assets/img/index/cepnsa-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/enroll/style.css">
+    <title>Matrícula — CEPNSA</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" autocomplete="on" id="enroll" method="post">
+            <div class="data-section first-data">
+                <div class="input-photo">
+                    <div class="bg-foto">
+                        <img id="profileImage" />
+                    </div>
+                    <label for="studentPhoto" class="upload-photo btn">Adicionar foto</label>
+                    <input type="file" id="studentPhoto" name="studentPhoto">
+                </div>
+                <label for="iname">
+                    <p>Nome:</p>
+                    <input type="text" name="name" id="iname" placeholder="Gabriel Manuel de Sousa"
+                        pattern="[A-Za-zÀ-ÿ\s]+" autocomplete="name" required>
+                </label>
+                <div class="grid">
+                    <label for="inasc">
+                        <p>Data de Nascimento:</p>
+                        <input type="date" name="nascimento" id="inasc" autocomplete="bday" required>
+                    </label>
+                    <label for="inat">
+                        <p>Naturalidade:</p>
+                        <input type="text" name="naturalidade" id="inat" placeholder="Viana"
+                            autocomplete="address-level1" required>
+                    </label>
+                </div>
+                <label for="iwith">
+                    <p>Com quem vive:</p>
+                    <input type="text" name="parents" id="iwith" placeholder="Pais e Irmãos" required>
+                </label>
+                <div class="grid">
+                    <label for="imora">
+                        <p>Morada:</p>
+                        <input type="text" name="living" id="imora" placeholder="Viana, Zango 1"
+                            autocomplete="address-level2" required>
+                    </label>
+                    <label for="bi">
+                        <p>Número do BI:</p>
+                        <input type="text" name="bi-num" id="bi" placeholder="02030049LA348"
+                            pattern="\d{8}[A-Z]{2}\d{3}" required>
+                    </label>
+                </div>
+                <label for="ienc">
+                    <p>Encarregado:</p>
+                    <input type="text" name="encarregado" id="ienc" placeholder="Manuel de Sousa"
+                        pattern="[A-Za-zÀ-ÿ\s]+" required>
+                </label>
+            </div>
+
+            <div class="data-section">
+                <h3 class="title">Dados dos pais</h3>
+                <label for="n-pai">
+                    <p>Nome do pai:</p>
+                    <input type="text" name="encarregado-nome" id="n-pai" placeholder="Manuel de Sousa"
+                        autocomplete="on" pattern="[A-Za-zÀ-ÿ\s]+" required>
+                </label>
+                <div class="age-profs">
+                    <label for="age-pai">
+                        <p>Idade:</p>
+                        <input type="number" name="age-pai" id="age-pai" placeholder="38" min="19" max="117" required>
+                    </label>
+                    <label for="prof-pai">
+                        <p>Profissão (Opcional):</p>
+                        <input type="text" name="encarregado-profissao" id="prof-pai" placeholder="Professor"
+                            pattern="[A-Za-zÀ-ÿ\s]+">
+                    </label>
+                </div>
+                <div class="grid">
+                    <label for="tel-pai">
+                        <p>Telefone:</p>
+                        <input type="tel" name="tel-pai" id="tel-pai" placeholder="933233953" autocomplete="tel"
+                            pattern="9\d{8}" required>
+                    </label>
+                    <label for="email-pai">
+                        <p>Email (Opcional):</p>
+                        <input type="email" name="encarregado-email" id="email-pai" placeholder="example@gmail.com"
+                            autocomplete="email">
+                    </label>
+                </div>
+
+
+                <label for="n-mae">
+                    <p>Nome da mãe:</p>
+                    <input type="text" name="encarregado-nome-mae" id="n-mae" placeholder="Maria Neves"
+                        pattern="[A-Za-zÀ-ÿ\s]+" required>
+                </label>
+                <div class="age-profs">
+                    <label for="age-mae">
+                        <p>Idade:</p>
+                        <input type="number" name="age-mae" id="age-mae" placeholder="35" min="19" max="117" required>
+                    </label>
+                    <label for="prof-mae">
+                        <p>Profissão (Opcional):</p>
+                        <input type="text" name="encarregado-profissao-mae" id="prof-mae" placeholder="Médica">
+                    </label>
+                </div>
+                <div class="grid">
+                    <label for="tel-mae">
+                        <p>Telefone:</p>
+                        <input type="tel" name="tel-mae" id="tel-mae" placeholder="923746284" autocomplete="tel"
+                            pattern="9\d{8}" required>
+                    </label>
+                    <label for="email-mae">
+                        <p>Email (Opcional):</p>
+                        <input type="email" name="encarregado-email-mae" id="email-mae" placeholder="example@gmail.com"
+                            autocomplete="email">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Informações -->
+            <div class="data-section">
+                <h3 class="title">Informações</h3>
+                <div class="informs">
+                    <div class="class-course">
+                        <div class="grade classList">
+                            <label for="classe">
+                                <p class="grade-title">Classe: </p>
+                            </label>
+                            <select id="classe" name="classe" required>
+                                <option value="">Escolha a sua classe</option>
+                                <option value="iniciacao">Iniciação</option>
+                                <option value="classe1">1ª Classe</option>
+                                <option value="classe2">2ª Classe</option>
+                                <option value="classe3">3ª Classe</option>
+                                <option value="classe4">4ª Classe</option>
+                                <option value="classe5">5ª Classe</option>
+                                <option value="classe6">6ª Classe</option>
+                                <option value="classe7">7ª Classe</option>
+                                <option value="classe8">8ª Classe</option>
+                                <option value="classe9">9ª Classe</option>
+                                <option value="classe10">10ª Classe</option>
+                                <option value="classe11">11ª Classe</option>
+                                <option value="classe12">12ª Classe</option>
+                                <option value="classe13">13ª Classe</option>
+                            </select>
+                        </div>
+
+                        <div class="courseList">
+                            <label for="curso">
+                                <p class="grade-title">Curso: </p>
+                            </label>
+                            <select id="curso" name="curso">
+                                <option value="">Escolha o seu curso</option>
+                                <option value="clinic">Análises Clínicas</option>
+                                <option value="cej">Ciências Económicas e Jurídicas</option>
+                                <option value="enfermagem">Enfermagem </option>
+                                <option value="farm">Farmácia</option>
+                                <option value="financas">Gestão de Finanças</option>
+                                <option value="inf">Informática</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label for="restric-alim">
+                        <p>Restrições alimentares (Opcional):</p>
+                        <input type="text" name="restricoes" id="restric-alim"
+                            placeholder="Não consume frutos do mar sem escamas.">
+                    </label>
+                    <label for="ind-medicas">
+                        <p>Indicações médicas (Opcional):</p>
+                        <input type="text" name="indicacoes" id="ind-medicas"
+                            placeholder="Não pode praticar exercícios físicos.">
+                    </label>
+                    <label for="obs">
+                        <p>Observações (Opcional):</p>
+                        <input type="text" name="observacoes" id="obs" placeholder="O professor é o segundo pai.">
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <button class="cssbuttons-io-button" id="reset">
+                    Enviar dados
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </form>
+        <footer>
+            <p>© <span class="currentYear"></span> <a href="../index.html" class="blackIndex">CEPNSA</a>, Inc.</p>
+            <p class="app-version">Enroll v4.3.1</p>
+        </footer>
+    </div>
+
+    <!-- -----------Cartão de propina Smartphones---------- -->
+    <div class="notifications-container">
+        <div class="success">
+            <div class="flex">
+                <div class="success-prompt-wrap">
+                    <p class="success-prompt-heading">Matrícula Concedida</p>
+                    <p class="success-prompt">⁕ Seus dados de Estudante</p>
+                    <div class="success-prompt-prompt">
+                        <p>Ano Letivo: <span class="studentData ano-letivo1"></span></p>
+                        <p>Número da Matrícula: <span class="studentData num-matri"></span></p>
+                        <p>Data da Matrícula: <span class="studentData data-matri"></span></p>
+                        <p>Nome: <span class="studentData studentName"></span></p>
+                        <p>Residente: <span class="studentData residCard1"></span></p>
+                        <div class="course-sucess">
+                            <p>Curso: <span class="studentData classStudent"></span></p>
+                        </div>
+                        <p>Turma: <span class="studentData"><span class="shortForm1"></span><span
+                                    class="classForm1"></span>A</span></p>
+                        <p>Tel: <span class="studentData">930 181 108</span></p>
+                    </div>
+                </div>
+                <div class="close-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="close-card">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- --------Cartão de propina-------- -->
+    <div class="card">
+        <div class="close-tablet">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="close-card-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="card-inner">
+            <div id="card-student">
+                <div class="border">
+                    <div id="header">
+                        <div class="header-content">
+                            <div class="school-header">
+                                <div class="logo">
+                                    <img src="../assets/img/index/cepnsa-logo.png" alt="Logo da Escola"
+                                        class="logo-card">
+                                </div>
+                                <div id="school">
+                                    <h4 class="school-name">Complexo Escolar Privado Nossa <br> Senhora da Anunciação
+                                    </h4>
+                                    <span class="lema">"Oração e Educação"</span>
+                                </div>
+                            </div>
+                            <h1 class="card-propina"> CARTÃO DE CONTROL DE PROPINA <br> <span
+                                    class="ano-letivo2"></span></h1>
+                            <div class="data-card">
+                                <p class="title bold">N.° DA MATRICULA </p>
+                                <span class="numMatriCard content"
+                                    style="border-bottom: 1px solid black; width: 150px;">6940</span>
+                            </div>
+                        </div>
+                        <div id="foto-student">
+                            <img src="" alt="foto-student" style=" width: 143px; height: 160px;" id="cardPhoto">
+                        </div>
+                    </div>
+                    <div class="data">
+                        <div class="data-card">
+                            <p class="title bold">DATA DA MATRICULA</p>
+                            <span class="dateMatriCard content"
+                                style="border-bottom: 1px solid black; width: 150px;"></span>
+                        </div>
+                        <div class="data-card">
+                            <p class="title">Nome: </p>
+                            <span class="line"><span class="nameCard content">Makene J. Furtado Neto</span></span>
+                        </div>
+                        <div class="data-card">
+                            <p class="title">Residente: </p>
+                            <span class="line"><span class="residCard2 content">Viana, zango 0</span></span>
+                        </div>
+                        <div class="data-card course-card">
+                            <p class="title">Curso: </p>
+                            <span class="line"><span class="courseCard content">Informática</span></span>
+                        </div>
+                        <div class="data-flex">
+                            <div class="data-card">
+                                <p class="title">Turma: </p>
+                                <span class="classCard content"
+                                    style="border-bottom: 1px solid black; width: 125px;"><span
+                                        class="shortForm2"></span><span class="classForm2">13</span>A</span>
+                            </div>
+                            <div class="data-card">
+                                <p class="title">Tel: </p>
+                                <span class="telCard content" style="border-bottom: 1px solid black; width: 172px;">930
+                                    181 108</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="card-propina">
+                <div class="border-mes">
+                    <div class="month" id="set">
+                        <p class="mes">Setembro</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="out">
+                        <p class="mes">Outubro</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="nov">
+                        <p class="mes">Novembro</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="dez">
+                        <p class="mes">Dezembro</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="jan">
+                        <p class="mes">Janeiro</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="fev">
+                        <p class="mes">Fevereiro</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="mar">
+                        <p class="mes">Março</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="abr">
+                        <p class="mes">Abril</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="mai">
+                        <p class="mes">Maio</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="jun">
+                        <p class="mes">Junho</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="jul">
+                        <p class="mes">Julho</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="month" id="ago">
+                        <p class="mes">Agosto</p>
+                        <p class="date">___ /___ /___</p>
+                        <div class="dotted"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-cepnsa">
+        <img src="../assets/img/enroll/iMessage_logo.png" alt="Logo do iMessage">
+        <div class="message-content">
+            <h1>Nossa Senhora da Anunciaç...</h1>
+            <p>Seja bem-vindo à nossa instit...</p>
+        </div>
+        <div class="message-time">
+            <p>agora</p>
+        </div>
+    </div>
+
+    <div class="loading">
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="loader"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"
+        integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/scripts/enroll/enroll.js"></script>
+    <script src="../assets/scripts/enroll/app.js"></script>
+</body>
+
+</html>
